@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENTS</title>
+
+    <!--Ans of Q3.-->
+    <style>
+        table {
+            width: 60%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        button {
+            padding: 5px 10px;
+            background-color: lightslategray;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2 style="text-align: center;">Student Records</h2>
+    <table id="studentTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Grade</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Saira</td>
+                <td>20</td>
+                <td>A+</td>
+                <td><button onclick="deleteRow(this)">Delete</button></td>
+            </tr>
+            <tr>
+                <td>Sadaf</td>
+                <td>18</td>
+                <td>A</td>
+                <td><button onclick="deleteRow(this)">Delete</button></td>
+            </tr>
+            <tr>
+                <td>Ali</td>
+                <td>19</td>
+                <td>A</td>
+                <td><button onclick="deleteRow(this)">Delete</button></td>
+            </tr>
+            <tr>
+                <td>Zeeshan</td>
+                <td>21</td>
+                <td>C</td>
+                <td><button onclick="deleteRow(this)">Delete</button></td>
+            </tr>
+            <tr>
+                <td>Laiqa</td>
+                <td>20</td>
+                <td>A</td>
+                <td><button onclick="deleteRow(this)">Delete</button></td>
+            </tr>
+            <tr>
+                <td>Hira</td>
+                <td>23</td>
+                <td>A</td>
+                <td><button onclick="deleteRow(this)">Delete</button></td>
+            </tr>
+            <tr>
+                <td>Aqib</td>
+                <td>18</td>
+                <td>A</td>
+                <td><button onclick="deleteRow(this)">Delete</button></td>
+            </tr>
+            <tr>
+                <td>Erum</td>
+                <td>22</td>
+                <td>A+</td>
+                <td><button onclick="deleteRow(this)">Delete</button></td>
+            </tr>
+            <tr>
+                <td>Aiman</td>
+                <td>20</td>
+                <td>A</td>
+                <td><button onclick="deleteRow(this)">Delete</button></td>
+            </tr>
+            <tr>
+                <td>Nabeel</td>
+                <td>21</td>
+                <td>C</td>
+                <td><button onclick="deleteRow(this)">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <body>
+
+        <!-- Ans of Q2 -->
+        <style>
+            img {
+                height: 200px;
+                width: 150px;
+                margin: 10px;
+                transition: transform 0.2s;
+            }
+
+            img:hover {
+                transform: scale(1.20);
+            }
+        </style>
+
+        <h2 style="text-align: center;">Mobile Phone lookup</h2>
+        <div style="text-align: center;">
+            <img src="/iPhone6Plus.gif.jpg" alt="iPhone6Plus"
+                onclick="showAlert('Thanks for purchasing a phone from us')">
+            <img src="/GalaxyS6EdgePlus.gif.jpg" alt="GalaxyS6EdgePlus"
+                onclick="showAlert('Thanks for purchasing a phone from us')">
+            <img src="/V10.gif.jpg" alt="V10.gif.jpg" onclick="showAlert('Thanks for purchasing a phone from us')">
+            <img src="/HuaweiP8.gif.jpg" alt="HuaweiP8" onclick="showAlert('Thanks for purchasing a phone from us')">
+        </div>
+        <!-- Ans of Q4 -->
+
+        <style>
+            img {
+                width: 200px;
+                /* Adjust the size as needed */
+                height: auto;
+            }
+        </style>
+        <h1>Image Switcher</h1>
+        <img id="imageSwitcher" src="/clouds.jpg" alt="" />
+
+        <script>
+            // Select the image element
+            const imageSwitcher = document.getElementById('imageSwitcher');
+
+            // Store the original and hover images
+            const originalImage = '/clouds.jpg'; // Path to your original image
+            const hoverImage = '/rainy weather.jpg';     // Path to your hover image
+
+            // Change the image on mouseover
+            imageSwitcher.addEventListener('mouseover', () => {
+                imageSwitcher.src = hoverImage;
+            });
+
+            // Change it back on mouseout
+            imageSwitcher.addEventListener('mouseout', () => {
+                imageSwitcher.src = originalImage;
+            });
+        </script>
+
+        <!-- Ans of Q5-->
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                margin-top: 50px;
+            }
+
+            button {
+                padding: 10px 20px;
+                font-size: 16px;
+                margin: 5px;
+            }
+
+            #counter {
+                font-size: 24px;
+                margin: 20px;
+            }
+        </style>
+
+        <h1>Simple Counter</h1>
+        <div id="counter">0</div>
+        <button id="increaseBtn">Increase</button>
+        <button id="decreaseBtn">Decrease</button>
+
+        <script>
+            let count = 0;
+
+            const counterElement = document.getElementById('counter');
+            const increaseButton = document.getElementById('increaseBtn');
+            const decreaseButton = document.getElementById('decreaseBtn');
+
+            // Function to update the counter display
+            function updateCounter() {
+                counterElement.textContent = count;
+            }
+
+            // Increase count
+            increaseButton.addEventListener('click', () => {
+                count++;
+                updateCounter();
+            });
+
+            // Decrease count
+            decreaseButton.addEventListener('click', () => {
+                count--;
+                updateCounter();
+            });
+        </script>
+
+        <SCript src="program.js"></SCript>
+    </body>
+
+</html>
